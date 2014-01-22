@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <title>ApPiano</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- #include <css> -->
+        <link href="static/css/reset.css" rel="stylesheet" type="text/css" />
+        <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+        
+        <!-- #include <javascript> -->
+        <script src="static/js/PlayTone.js"></script>
+        <script src="static/js/Init.js"></script>
+        <script src="static/js/PlayLoop.js"></script>
+        
+    </head>
+    
+    <body onload="initElement()">
+        
+        <!-- Mbajtesi i te gjithe elementeve te nderfaqes grafike -->
+        <div id="wrapper">
+            
+            <div id="piano-wrapper">
+                
+                <div class="settings">
+                    
+                    <!-- Lista e instrumenteve qe mund te zgjidhen per tu luajtur -->
+                    <div class="one-third">
+                        <select id="instrument">
+                            <option class="instrument" value="piano" selected="selected"> Piano </option>
+                            <option class="instrument"  value="a_guitar"> Acoustic Guitar </option>
+                            <option class="instrument"  value="e_guitar"> Electric Guitar </option>
+                        </select>
+                    </div>
+                    
+                    <!-- Ekrani led qe tregon notat qe luhet -->
+                    <div class="one-third">
+                        <div class="led">
+                            <span id="ledValue"> </span>
+                            <img src="static/img/glow.png" width="120" height="25" />
+                        </div>
+                    </div>
+                    
+                    <!-- Lista e loop-save qe mund te zgjidhen per tu luajtur (repeating) --->
+                    <div class="one-third loopsSection">
+                        <div class="selectLoops">
+                            <select id="loops">
+                                <option class="loops" value="Classic_Break" selected="selected"> Classic Break </option>
+                                <option class="loops" value="Drumroom"> Drumroom </option>
+                                <option class="loops" value="DudaFunk"> DudaFunk </option>
+                                <option class="loops" value="Electrobox"> Electrobox </option>
+                                <option class="loops" value="Electroloop"> Electroloop </option>
+                                <option class="loops" value="Ghost_Break"> Ghost Break </option>
+                                <option class="loops" value="Halftime"> Halftime </option>
+                                <option class="loops" value="Houser"> Houser </option>
+                                <option class="loops" value="Housetime"> Housetime </option>
+                                <option class="loops" value="Jazzfunk"> Jazzfunk </option>
+                                <option class="loops" value="Jazzmaster"> Jazzmaster </option>
+                                <option class="loops" value="Lectrohaus"> Lectrohaus </option>
+                                <option class="loops" value="Pounder"> Pounder </option>
+                                <option class="loops" value="Power_Break"> Power Break </option>
+                                <option class="loops" value="Ride_Break"> Ride Break </option>
+                                <option class="loops" value="Rocker"> Rocker </option>
+                                <option class="loops" value="Rolling_Break"> Rolling Break </option>
+                                <option class="loops" value="Smooth"> Smooth </option>
+                                <option class="loops" value="Synthbeat"> Synthbeat </option>
+                                <option class="loops" value="Synthdroom"> Synthdroom </option>
+                                <option class="loops" value="The_Funk"> The Funk </option>
+                            </select>
+                        </div>
+                        <!-- <button id="playBtn" onclick="playLoop()" >play</button> -->
+                        <div class="img">
+                            <img src="static/img/play.png" width="24" height="24" name="play" id="playBtn" onClick="playLoop()" />
+                        </div>
+                    </div>
+                </div><!-- END settings -->
+                
+                <!-- Tastiera e pianos -->
+                <div class="keys">
+                    <ul>
+                        <li class="first key" id="C"></li>
+                        <li id="D" class="key"></li>
+                        <li id="E" class="key"></li>
+                        <li id="F" class="key"></li>
+                        <li id="G" class="key"></li>
+                        <li id="A" class="key"></li>
+                        <li id="B" class="key"></li>
+                        <li class="last key" id="C2"></li>
+                        <li class="semi-tones">
+                            <div class="semi-tone key" id="C-sharp"></div>
+                            <div class="semi-tone key" id="D-sharp"></div>
+                            <div class="semi-tone key" id="F-sharp"></div>
+                            <div class="semi-tone key" id="G-sharp"></div>
+                            <div class="semi-tone key" id="A-sharp"></div>
+                        </li>
+                    </ul>
+                </div><!-- END keys -->
+                
+            </div><!-- END piano-wrapper -->
+            
+        </div><!-- END wrapper -->
+        
+    </body>
+    
+</html>

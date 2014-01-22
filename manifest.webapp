@@ -1,0 +1,18 @@
+{
+    "name": "ApPiano",
+    "version": "0.1",
+    "description": "A simple piano app",
+    "launch_path": "/welcome.html",
+    "permissions": {
+        "audio-channel-content":{"description":"Use the audio channel for the music player"}
+    },
+    "developer": {
+        "name": "Aldo Ziflaj",
+        "url": "https://www.facebook.com/aldo.ziflaj"
+    },
+    "icons": {
+        "64": "/static/img/icon_64.png",
+        "128": "/static/img/icon_128.png"
+    },
+    "orientation" : "landscape"
+}

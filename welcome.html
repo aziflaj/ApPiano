@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="static/css/reset.css" rel="stylesheet">
+        <script>
+            setInterval(function(){window.location.assign("/index.html");},3000);
+            screen.mozLockOrientation("landscape");
+            
+            function playSound(){
+                
+                var nr=Math.floor((Math.random()*3)+1); 
+                var sound = new Audio("/data/startMelody/"+nr+".ogg");
+                sound.play();
+            }
+            
+        </script>
+    </head>
+    <body style="
+                    background: url('static/img/logo_480.jpg') top left no-repeat;
+                    background-color:#fff;
+                    height: 300px;
+                    " onload="playSound()">
+    </body>
+</html>

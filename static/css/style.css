@@ -1,0 +1,183 @@
+
+/* Importimi i fontit */
+@font-face{
+    font-family: OpenSans;
+    src: url("../fonts/opensans/OpenSans-Regular.ttf");
+}
+
+
+/* --------------------------------- CSS GLOBALE --------------------------- */
+body{
+    font-family: OpenSans;
+    background-color: #9b9b9b;
+    background-image: url('../img/gradient.png');
+    background-repeat: repeat-x;
+}
+
+#wrapper{
+    width: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+/* --------------------------------- CSS TE PIANOS ------------------------- */
+#piano-wrapper{
+    width: 470px;
+    height: 220px;
+    border-radius: 7px 7px 3px 3px;
+    margin: 20px auto;
+    margin-top: 40px;
+    background: url("../img/pianoBg.JPG") repeat-x;
+    box-shadow: 0 0 15px #141414;
+}
+
+#piano-wrapper .settings{
+    width: 100%;
+    height: 80px;
+}
+
+#piano-wrapper .keys{
+    height: 140px;
+}
+
+#piano-wrapper .keys ul{
+    list-style: none;
+    float: left;
+    padding: 3px 50px 0 50px;
+    position: relative;
+}
+
+#piano-wrapper .keys ul li{
+    float: left;
+    width: 45px;
+    border-right: none;
+    background-color: white;
+    background: url("../img/WhiteKeyUp.png") no-repeat bottom left;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-left: 1px solid black;
+    height: 139px;
+}
+
+#piano-wrapper .keys ul li:active{
+    background: url("../img/WhiteKeyDown.png");
+}
+
+#piano-wrapper .keys ul li.first{
+    border-top-left-radius: 4px;
+}
+
+#piano-wrapper .keys ul li.last{
+    border-top-right-radius: 4px;
+    border-right: 1px solid black;
+}
+
+#piano-wrapper .keys ul li.semi-tones{
+    width: 0px;
+    height: 0px;
+    border: none;
+    background: none;
+}
+
+#C-sharp, #D-sharp, #F-sharp, #G-sharp, #A-sharp{
+    position: absolute;
+    top: 3px;
+    width: 26px;
+    height: 82px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: url("../img/BlackKeyUp.png") no-repeat top left;
+}
+
+#C-sharp{
+    left: 84px;
+}
+
+#D-sharp{
+    left: 130px;
+}
+
+#F-sharp{
+    left: 222px;
+}
+
+#G-sharp{
+    left: 268px;
+}
+
+#A-sharp{
+    left: 314px;
+}
+
+#C-sharp:active, #D-sharp:active, #F-sharp:active,
+#G-sharp:active, #A-sharp:active{
+    background: url("../img/BlackKeyDown.png");
+}
+
+
+#piano-wrapper .settings .one-third{
+    width: 33%;
+    float: left;
+}
+
+#piano-wrapper .settings ul li{
+    float: left;
+}
+
+#piano-wrapper .settings .one-third{
+    margin-top: 20px;
+}
+
+#piano-wrapper .settings #instrument{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#piano-wrapper .settings .led{
+    background-color: #232325;
+    width: 120px;
+    height: 50px;
+    margin-left: 10px;
+    position: relative;
+}
+
+#piano-wrapper .settings .led span{
+    padding: 13px 50px;
+    display: block;
+    color: #cbe003;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow:2px 2px 3px #000;
+}
+
+#piano-wrapper .settings .led img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity:0.1;
+    filter:alpha(opacity=10);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#piano-wrapper .settings .loopsSection div.img{
+    float:right;
+    width: 25%;
+}
+
+#piano-wrapper .settings .loopsSection img{
+    float: right;
+    margin-right: 5px;
+}
+
+#piano-wrapper .settings .loopsSection div.selectLoops{
+    float: left;
+    padding-left: 5%;
+    width:60%;
+}
+
+#piano-wrapper .settings .loopsSection div{
+    margin-top: 5px;
+}
